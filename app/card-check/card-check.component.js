@@ -5,19 +5,12 @@ angular.
   module('cardCheck').
   component('cardCheck', {
     templateUrl: 'card-check/card-check.template.html',
+    controller: function CardCheckController($http) {
+      var self = this;
+      self.orderProp = 'card_id';
 
-
-    controller: function CardCheckController() {
-      this.cards = [
-        {
-          original_text: "home",
-          translated_text: "дом"
-        },
-
-        {
-          original_text: "wolf",
-          translated_text: "волк"
-        }
-      ];
+      $http.get('cards/cards.json').then(function(response) {
+        self.cards = response.data;
+      });
     }
   });

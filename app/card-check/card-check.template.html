@@ -1,6 +1,32 @@
-  <ul>
-    <li ng-repeat="card in $ctrl.cards">
-      <span>{{card.original_text}}</span>
-      <p>{{card.translated_text}}</p>
-    </li>
-  </ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="original_text">Alphabetical</option>
+          <option value="review_date">Newest</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="cards">
+        <li ng-repeat="card in $ctrl.cards | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <span>{{card.original_text}}</span>
+          <p>{{card.review_date}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
