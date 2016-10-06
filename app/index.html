@@ -1,14 +1,20 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="cardcatApp">
   <head>
     <meta charset="utf-8">
-    <title>My HTML File</title>
+    <title>My Flashcars checker</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" media="all" href="files/application.self-32732b1a79dc0b46420c83e614bdec63a71bb2403dfd4b6c180a208e752b73e6.css" data-turbolinks-track="true">
 
-  <link rel="stylesheet" media="all" href="files/application.self-32732b1a79dc0b46420c83e614bdec63a71bb2403dfd4b6c180a208e752b73e6.css" data-turbolinks-track="true">
+
 
   <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="card-check.component.js"></script>
+
+
+
   <script src="files/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js"></script>
   <script src="files/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js"></script>
   <script src="files/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js"></script>
@@ -32,7 +38,7 @@
   </head>
   <body>
 
-    <p>Nothing here {{'yet' + '!'}}</p>
-
+    <!-- Use a custom component to render a result of cards check -->
+    <card-check></card-check>
   </body>
 </html>
