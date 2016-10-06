@@ -2,15 +2,9 @@
 
 // Register `cardCheck` component, along with its associated controller and template
 angular.
-  module('cardcatApp').
+  module('cardCheck').
   component('cardCheck', {
-    template:
-  '<ul>' +
-    '<li ng-repeat="card in $ctrl.cards">' +
-      '<span>{{card.original_text}}</span>' +
-      '<p>{{card.translated_text}}</p>' +
-    '</li>' +
-  '</ul>',
+    templateUrl: 'card-check/card-check.template.html',
 
 
     controller: function CardCheckController() {
