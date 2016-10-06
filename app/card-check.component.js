@@ -5,7 +5,6 @@ angular.
   module('cardcatApp').
   component('cardCheck', {
     template:
-{{1+2}}
   '<ul>' +
     '<li ng-repeat="card in $ctrl.cards">' +
       '<span>{{card.original_text}}</span>' +
