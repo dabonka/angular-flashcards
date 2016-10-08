@@ -3,29 +3,24 @@
     <div class="col-md-2">
       <!--Sidebar content-->
 
-      <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
 
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="original_text">Alphabetical</option>
-          <option value="review_date">Newest</option>
-        </select>
-      </p>
 
     </div>
     <div class="col-md-10">
       <!--Body content-->
 
       <ul class="cards">
-        <li ng-repeat="card in $ctrl.cards | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+        <li ng-repeat="card in $ctrl.card">
           <span>{{card.original_text}}</span>
-          <p>{{card.review_date}}</p>
+          <input type="text" name="translated_text">
+          <input type="hidden" name="card_id">
+          <button type="submit" class="btn btn-success">Проверить</button>
         </li>
       </ul>
+
+      <p ng-model="$ctrl.card">
+      {{$ctrl.translate}}
+      </p>
 
     </div>
   </div>

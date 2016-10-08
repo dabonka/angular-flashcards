@@ -8,38 +8,5 @@
     "imageUrl": "img/cards/home.png", 
     "avatar_file_name": "home.png",
     "deck_id": 1
-    },
-
-        {
-    "card_id": 2,
-    "original_text": "wolf",
-    "translated_text": "волк",
-    "review_date": "2016-10-02",
-    "user_id": 1,
-    "imageUrl": "img/cards/wolf.png", 
-    "avatar_file_name": "wolf.png",
-    "deck_id": 1
-    },
-
-        {
-    "card_id": 3,
-    "original_text": "rabbit",
-    "translated_text": "кролик",
-    "review_date": "2016-10-03",
-    "user_id": 1,
-    "imageUrl": "img/cards/rabbit.jpg", 
-    "avatar_file_name": "rabbit.jpg",
-    "deck_id": 1
-    },
-
-        {
-    "card_id": 4,
-    "original_text": "bear",
-    "translated_text": "медведь",
-    "review_date": "2016-10-04",
-    "user_id": 1,
-    "imageUrl": "img/cards/bear.jpg", 
-    "avatar_file_name": "bear.jpg",
-    "deck_id": 1
     }
 ]

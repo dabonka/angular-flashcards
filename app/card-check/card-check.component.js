@@ -8,9 +8,10 @@ angular.
     controller: function CardCheckController($http) {
       var self = this;
       self.orderProp = 'card_id';
-
+      
       $http.get('cards/cards.json').then(function(response) {
-        self.cards = response.data;
+        self.card = response.data;
+        self.translate = self.card.translated_text;
       });
     }
   });
