@@ -7,11 +7,16 @@ angular.
     templateUrl: 'card-check/card-check.template.html',
     controller: function CardCheckController($http) {
       var self = this;
-      self.orderProp = 'card_id';
       
       $http.get('cards/cards.json').then(function(response) {
         self.card = response.data;
-        self.translate = self.card.translated_text;
+
       });
+
+       self.formSubmit = function(event) {
+        event.preventDefault();
+        console.log(self.user_variant);
+        console.log(self.card.card_id);
+      }
     }
   });
