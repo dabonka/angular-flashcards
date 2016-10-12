@@ -8,16 +8,17 @@ angular.
     controller: ['Card',
     function CardCheckController(Card) {
 
+      var self = this;
+
       self.random_card = function() {
         Card.get_random_card().$promise.then(function(result){
           self.card = result.data;
         })
       }
 
-      var self = this;
-        $onInit() {
-          self.random_card; // Берем при инициации значение рандомной карты
-        }
+      $onInit() {
+        self.random_card(); // Берем при инициации значение рандомной карты
+      }
 
       self.formSubmit = function(event) {
         event.preventDefault();
@@ -37,7 +38,7 @@ angular.
               console.log ("Ошибка"); // Выводим сообщение об ошибке
             }
 
-          self.random_card; // Повторно берем значение рандомной карты
+          self.random_card(); // Повторно берем значение рандомной карты
 
         });
       }
