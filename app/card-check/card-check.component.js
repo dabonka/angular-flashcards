@@ -7,9 +7,16 @@ angular.
     templateUrl: 'card-check/card-check.template.html',
     controller: ['Card',
     function CardCheckController(Card) {
+
+      self.random_card = function() {
+        Card.get_random_card().$promise.then(function(result){
+          self.card = result.data;
+        })
+      }
+
       var self = this;
         $onInit() {
-        self.card = Card.get_random_card(); // Берем при инициации значение рандомной карты
+          self.random_card; // Берем при инициации значение рандомной карты
         }
 
       self.formSubmit = function(event) {
@@ -30,7 +37,7 @@ angular.
               console.log ("Ошибка"); // Выводим сообщение об ошибке
             }
 
-          self.card = Card.get_random_card(); // Повторно берем значение рандомной карты
+          self.random_card; // Повторно берем значение рандомной карты
 
         });
       }
