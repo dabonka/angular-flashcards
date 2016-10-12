@@ -9,12 +9,30 @@ angular.
     function CardCheckController(Card) {
       var self = this;
         $onInit() {
-        this.cards = Card.get_random_card();
+        self.card = Card.get_random_card(); // Берем при инициации значение рандомной карты
         }
 
       self.formSubmit = function(event) {
-      event.preventDefault();
-      this.cards = Card.compare();
+        event.preventDefault();
+
+        var user_card_data = {translated_text: self.user_variant, card_id: self.card.card_id}; 
+        //Собрал данные пользователя и отправляю в следующей строке
+
+        Card.compare(user_card_data).$promise.then(function(result_of_compare){
+        // Дальше мы получаем из сервиса результат проверки и анализируем его
+
+            if (result_of_compare){
+             self.correct = true;
+             console.log ("Правильно"); // Выводим сообщение о правильном переводе
+
+            } else {
+              self.correct = false;
+              console.log ("Ошибка"); // Выводим сообщение об ошибке
+            }
+
+          self.card = Card.get_random_card(); // Повторно берем значение рандомной карты
+
+        });
       }
     }
   });
