@@ -5,18 +5,20 @@ angular.
   module('cardCheck').
   component('cardCheck', {
     templateUrl: 'card-check/card-check.template.html',
-    controller: function CardCheckController($http) {
-      var self = this;
+    controller: ['Card',
+    function CardCheckController(Card) {
+
+      $onInit() {
       
-      $http.get('cards/cards.json').then(function(response) {
-        self.card = response.data;
 
-      });
+      }
 
-       self.formSubmit = function(event) {
-        event.preventDefault();
-        console.log(self.user_variant);
-        console.log(self.card.card_id);
+      var self = this;
+      $ctrl.card = result.data
+      self.formSubmit = function(event) {
+      event.preventDefault();
+      console.log(self.user_variant);
+      console.log(self.card.card_id);
       }
     }
   });
