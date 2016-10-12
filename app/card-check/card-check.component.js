@@ -14,7 +14,7 @@ angular.
       }
 
       var self = this;
-      $ctrl.card = result.data
+      this.cards = Card.get_random_card();
       self.formSubmit = function(event) {
       event.preventDefault();
       console.log(self.user_variant);
