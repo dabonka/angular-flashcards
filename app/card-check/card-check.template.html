@@ -15,7 +15,9 @@
           <input type="text" placeholder="Введите перевод слова" ng-model="$ctrl.user_variant">
           <input type="submit" value="Проверить">
         </form>
-
+        
+        <div ng-show="correct">Правильно!</div> 
+        <div ng-show="incorrect">Ошибка!</div> 
     </div>
   </div>
 </div>

@@ -23,6 +23,9 @@ angular.
       self.formSubmit = function(event) {
         event.preventDefault();
 
+        self.correct = false;
+        self.incorrect = false;
+
         var user_card_data = {translated_text: self.user_variant, card_id: self.card.card_id}; 
         //Собрал данные пользователя и отправляю в следующей строке
 
@@ -34,7 +37,7 @@ angular.
              console.log ("Правильно"); // Выводим сообщение о правильном переводе
 
             } else {
-              self.correct = false;
+              self.incorrect = true;
               console.log ("Ошибка"); // Выводим сообщение об ошибке
             }
 
