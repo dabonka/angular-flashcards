@@ -32,7 +32,7 @@ angular.
           Card.compare(user_card_data).$promise.then(function(result_of_compare){
           // Дальше мы получаем из сервиса результат проверки и анализируем его
 
-              if (result_of_compare){
+              if (result_of_compare == "success"){
                self.correct = true;
                console.log ("Правильно"); // Выводим сообщение о правильном переводе
 
