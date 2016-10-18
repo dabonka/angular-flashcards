@@ -59,7 +59,7 @@ npm start
 </code>
 </pre>
 <h3>Running the Web Server for simulation of data receiving</h3>
-For simulation of data receiving jus call:
+For simulation of data receiving just call:
 <pre>
 <code>
 ruby server.rb
