@@ -8,6 +8,8 @@ Flashcards will help you learn various languages like English, German, Spanish, 
 
 <h2>Directory structure</h2>
 
+<pre>
+<code>
 /app/                 - the app source
 /app/card-check/      - card-check module, component, template
 /app/cards/cards.json - for intermediate stage of receiving data from json format
@@ -15,7 +17,8 @@ Flashcards will help you learn various languages like English, German, Spanish, 
 /app/files/           - files from the previous version of the template
 /app/img/cards/       - images
 /server.rb            - server for imitation of receiving data
-
+</code>
+</pre>
 <h2>How to install</h2>
 <h3>Download angular-flashcards</h3>
 Clone the <a href ="https://github.com/dabonka/angular-flashcards/">angular-flashcards repository</a> located at GitHub by running the following command:
