@@ -8,11 +8,13 @@ Flashcards will help you learn various languages like English, German, Spanish, 
 
 <h2>Directory structure</h2>
 
-app: The app source
-
-
-.server.rb - server for imitation of receiving data
-
+/app/                 - the app source
+/app/card-check/      - card-check module, component, template
+/app/cards/cards.json - for intermediate stage of receiving data from json format
+/app/core/card/       - core, card modules
+/app/files/           - files from the previous version of the template
+/app/img/cards/       - images
+/server.rb            - server for imitation of receiving data
 
 <h2>How to install</h2>
 <h3>Download angular-flashcards</h3>
